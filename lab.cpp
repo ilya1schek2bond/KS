@@ -17,11 +17,11 @@ int main() {
     for (int i = 1; i <= 100000; i++) {
         vector<int> result = arithmeticProgression(i);
         // Виведення елементів арифметичної прогресії
-        cout << "AP(" << i << ") = ";
-        for (int j = 0; j < result.size(); j++) {
-            cout << result[j] << " ";
-        }
-        cout << endl;
+        //cout << "AP(" << i << ") = ";
+        //for (int j = 0; j < result.size(); j++) {
+            //cout << result[j] << " ";
+        //}
+        //cout << endl;
     }
     return 0;
 }
