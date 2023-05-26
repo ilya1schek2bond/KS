@@ -3,18 +3,25 @@
 
 using namespace std;
 
-// A function to calculate the geometric progression from 1 to n
-vector<int> geometricProgression(int n) {
+// Функція для обчислення арифметичної прогресії від 1 до n
+vector<int> arithmeticProgression(int n) {
     vector<int> result = {1};
-    for (int i = 1; i <= n; i++) {
-        result.push_back(result.back() * (i - 1));
+    int diff = 1; // Різниця між сусідніми членами прогресії
+    for (int i = 1; i < n; i++) {
+        result.push_back(result.back() + diff);
     }
     return result;
 }
 
 int main() {
     for (int i = 1; i <= 100000; i++) {
-        vector<int> result = geometricProgression(i);
+        vector<int> result = arithmeticProgression(i);
+        // Виведення елементів арифметичної прогресії
+        cout << "AP(" << i << ") = ";
+        for (int j = 0; j < result.size(); j++) {
+            cout << result[j] << " ";
+        }
+        cout << endl;
     }
     return 0;
 }
